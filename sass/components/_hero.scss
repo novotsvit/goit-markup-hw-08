@@ -1,0 +1,87 @@
+.hero {
+  background-color: $hero-bg-color;
+  @media screen and (max-width: 1199px) {
+    & {
+      padding: 118px 0px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      padding: 200px 0px;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    color: $hero-color;
+  }
+
+  @media screen and (max-width: 1199px) {
+    &__title {
+      width: 360px;
+
+      font-size: 26px;
+      line-height: calc(42 / 26);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__title {
+      width: 696px;
+      font-size: 44px;
+      line-height: calc(60 / 44);
+    }
+  }
+
+  &--overlay {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg.jpg);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $overlay-bg-color;
+  }
+  &__button {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+
+    line-height: calc(30 / 16);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px $box-shadow-color;
+    border-radius: 4px;
+    border: 4px solid transparent;
+
+    color: $hero-color;
+    background-color: $accent-color;
+  }
+  @media screen and (max-width: 1199px) {
+    &__button {
+      min-width: 200px;
+      padding: 10px 24px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__button {
+      min-width: 216px;
+      padding: 10px 32px;
+    }
+  }
+}

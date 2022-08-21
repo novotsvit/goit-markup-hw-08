@@ -1,0 +1,37 @@
+.address {
+  &__item--mail {
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+
+ @media screen and (max-width: 767px){}
+
+  &__link {
+    display: inline-block;
+    font-style: normal;
+    line-height: 1.71;
+    text-decoration: none;
+
+    color: var(--address-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link--location {
+    display: inline-block;
+    font-style: normal;
+    line-height: 1.5;
+    text-decoration: none;
+
+    color: $hero-color;
+  }
+  &__link--mail:hover,
+  &__link--mail:focus {
+    color: $accent-color;
+  }
+  &__link--tel:hover,
+  &__link--tel:focus {
+    color: $accent-color;
+  }
+}

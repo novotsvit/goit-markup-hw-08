@@ -1,0 +1,61 @@
+.advantages {
+  @media screen and (max-width: 767px) {
+    &__picture {
+      padding: 25px 0px;
+      text-align: center;
+    }
+    &__item {
+      margin-bottom: 30px;
+    }
+    &__item:last-child {
+      margin-bottom: 0px;
+    }
+    &__heading {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    &__picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__picture {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 270px;
+      height: 120px;
+
+      background-color: $team-bg-color;
+      border-radius: 4px;
+    }
+    &__list .item:not(:last-child) {
+      margin-right: 30px;
+    }
+    &__list {
+      display: flex;
+    }
+  }
+  &__heading {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    line-height: calc(16 / 14);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $title-text-color;
+  }
+  &__text {
+    margin-bottom: 0px;
+  }
+}

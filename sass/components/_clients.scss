@@ -1,0 +1,76 @@
+.clients {
+  &__title {
+    text-align: center;
+    color: $title-text-color;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__title {
+      font-size: 28px;
+      line-height: calc(33 / 28);
+      margin-bottom: 30px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__item {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+    &__link {
+      width: 226px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__title {
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      margin-bottom: 50px;
+    }
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__link {
+      width: 170px;
+    }
+    &__list .item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    &__link {
+      width: 210px;
+      
+    }
+  }
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 92px;
+    border: 1px solid $network-icon-color;
+    border-radius: 4px;
+    fill: $network-icon-color;
+    transition-property: fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 1px solid $accent-color;
+    fill: $accent-color;
+  }
+}

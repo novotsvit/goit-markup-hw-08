@@ -1,0 +1,163 @@
+.register {
+  &__title {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+  }
+
+  &__form {
+    margin-bottom: 20px;
+  }
+
+  &__wrap {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__wrap:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+  }
+
+  &__field {
+    padding: 12px 41px;
+
+    font-size: 14px;
+    line-height: calc(14 / 12);
+
+    border: 1px solid $register-border-color;
+    border-radius: 4px;
+    outline: transparent;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__field:focus {
+    border-color: $accent-color;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 14px;
+    left: 12px;
+
+    fill: $title-text-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__field:focus + &__icon {
+    fill: $accent-color;
+  }
+
+  &__message {
+    height: 120px;
+    padding: 12px 16px;
+
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+
+    border: 1px solid $register-border-color;
+    border-radius: 4px;
+    outline: transparent;
+    resize: none;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__message:focus {
+    border-color: var(--accent-bg-color);
+  }
+  &__message::placeholder {
+    color: $register-ph-color;
+  }
+  &__agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-bottom: 30px;
+  }
+  &__checkbox:focus + &__agreement-icon {
+    outline: 2px solid $accent-color;
+    outline-offset: 1px;
+    border-radius: 2px;
+  }
+  &__uncheck {
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__checkbox {
+    opacity: 0;
+  }
+  &__checkbox:checked + &__pic > &__uncheck {
+    opacity: 0;
+  }
+  &__check {
+    opacity: 0;
+    fill: $accent-color;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__checkbox:checked + &__pic > &__check {
+    opacity: 1;
+  }
+  &__text-label {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+
+    user-select: none;
+  }
+
+  &__text-link {
+    color: $accent-color;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 52px;
+
+    width: 200px;
+    height: 50px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: $hero-color;
+    background: $accent-bg-color;
+    box-shadow: 0px 4px 4px $box-shadow-color;
+    border-radius: 4px;
+    border: transparent;
+  }
+
+  &__btn:focus,
+  &__btn:hover {
+    background-color: $register-btn-color;
+  }
+}

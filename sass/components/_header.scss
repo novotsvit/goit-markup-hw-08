@@ -1,0 +1,7 @@
+.header {
+  border-bottom: 1px solid $ph-border-color;
+  &__group {
+    display: flex;
+    align-items: center;
+  }
+}

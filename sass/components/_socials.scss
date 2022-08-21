@@ -1,0 +1,30 @@
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: $network-icon-color;
+    transition-property: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &--dark {
+      fill: $hero-color;
+      background-color: $network-bg-color;
+    }
+  }
+  &__link:hover,
+  &__link:focus {
+    fill: $hero-color;
+    background-color: $accent-bg-color;
+  }
+}

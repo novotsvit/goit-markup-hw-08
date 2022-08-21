@@ -1,0 +1,50 @@
+.logo {
+  display: inline-block;
+  font-family: $secondary-font;
+  font-weight: 700;
+  text-decoration: none;
+  color: $accent-color;
+
+
+ @media screen and (max-width: 767px){
+  &--footer {
+    text-align: center;
+ }
+}
+
+
+  @media screen and (max-width: 1199px) {
+    & {
+      font-size: 24px;
+      line-height: calc(28 / 24);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      font-size: 26px;
+      line-height: calc(31 / 26);
+    }
+  }
+
+  &__secondary-part {
+    font-family: $secondary-font;
+    text-decoration: none;
+    color: $logo-first-color;
+
+    @media screen and (max-width: 1199px) {
+      &__secondary-part {
+        font-size: 24px;
+        line-height: calc(28 / 24);
+      }
+      @media screen and (min-width: 1200px) {
+        &__secondary-part {
+          font-size: 26px;
+          line-height: calc(31 / 26);
+        }
+      }
+    }
+  }
+  &__secondary-part--light {
+    color: $hero-color;
+  }
+}

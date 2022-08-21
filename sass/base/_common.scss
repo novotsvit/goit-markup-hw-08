@@ -1,0 +1,41 @@
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+
+  color: $primary-text-color;
+  background-color: $header-bg-color;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-widht: 480px) {
+    & {
+      width: 480px;
+    }
+  }
+  @media screen and (min-widht: 768px) {
+    & {
+      width: 768px;
+    }
+  }
+  @media screen and (min-widht: 1200px) {
+    & {
+      width: 1200px;
+    }
+  }
+}
+
+.section {
+  padding: 60px 0px;
+
+  @media screen and (min-widht: 1200px) {
+    & {
+      padding: 94px 0px;
+    }
+  }
+}

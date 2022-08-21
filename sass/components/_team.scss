@@ -1,0 +1,74 @@
+.team {
+  background-color: $team-bg-color;
+  &__title {
+    font-weight: 700;
+
+    text-align: center;
+    color: $title-text-color;
+  }
+   @media screen and (max-width: 767px) {
+    &__item {
+      display: inline-block;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    &__title {
+      font-size: 28px;
+      line-height: calc(33 / 28);
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    &__title {
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      margin-bottom: 50px;
+    }
+    &__list {
+      display: flex;
+    }
+    &__list .item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__wrap {
+    padding: 30px 0;
+    background-color: $header-bg-color;
+  
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+
+    color: $title-text-color;
+  }
+  &__position {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    text-align: center;
+  }
+  &__item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+ 
+}
+}

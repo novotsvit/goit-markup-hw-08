@@ -1,0 +1,43 @@
+.examples {
+  @media screen and(max-width: 1199px) {
+    & {
+      display: none;
+    }
+  }
+  @media screen and(min-width: 1200px) {
+    padding-top: 0;
+    &__heading {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.17;
+      text-align: center;
+      color: $title-text-color;
+    }
+    &__list {
+      display: flex;
+    }
+    &__list .item:not(:last-child) {
+      margin-right: 30px;
+    }
+    &__content {
+      position: relative;
+    }
+    &__overlay {
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 70px;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(47, 48, 58, 0.8);
+    }
+    &__subtitle {
+      font-weight: 700;
+      line-height: 1.14;
+      text-transform: uppercase;
+      color: $hero-color;
+    }
+  }
+}
