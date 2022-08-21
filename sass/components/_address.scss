@@ -4,12 +4,24 @@
     margin-bottom: 9px;
   }
 
- @media screen and (max-width: 767px){}
+  @media screen and (max-width: 1199px) {
+    &__link--location,
+    &__link--tel,
+    &__link--mail {
+      text-align: center;
+      display: block;
+    }
+    &__item--mail {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    
+  }
 
   &__link {
-    display: inline-block;
+    // display: inline-block;
     font-style: normal;
-    line-height: 1.71;
+    line-height: calc(24 / 14);
     text-decoration: none;
 
     color: var(--address-color);

@@ -2,16 +2,40 @@
   padding: 60px 0px;
   background-color: $hero-bg-color;
 
+
+&__desc {
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $hero-color;
+}
+
+
   @media screen and (min-width: 480px) and (max-width: 767px) {
     &__container {
-      display:flex;
+      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-    &__item{
+    &__item {
       display: flex;
       flex-direction: column;
+    }
+
+    &__item--mobile {
+      margin-bottom: 60px;
+    }
+    &__desc--mobile {
+      display: block;
+      text-align: center;
+      
+    }
+    &__networks--mobile {
+      margin-bottom: 60px;
     }
   }
 
@@ -35,17 +59,6 @@
     &__logo {
       margin-bottom: 20px;
     }
-    &__desc {
-      margin-bottom: 20px;
-
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-
-      color: $hero-color;
-    }
   }
 }
 //   &__container {
@@ -57,18 +70,8 @@
 //     margin-left: 70px;
 //     margin-right: 93px;
 //   }
-  // &--footer {
+// &--footer {
 //     margin-bottom: 20px;
 //   }
-//   &__desc {
-//     margin-bottom: 20px;
 
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.03em;
-//     text-transform: uppercase;
-
-//     color: $hero-color;
-//   }
 // }
