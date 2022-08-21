@@ -208,13 +208,12 @@ body {
   text-decoration: none;
   color: #2196f3;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .logo--footer {
+    display: block;
     text-align: center;
     margin-bottom: 20px;
   }
-}
-@media screen and (max-width: 1199px) {
   .logo {
     font-size: 24px;
     line-height: 1.1666666667;
@@ -711,6 +710,21 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+  .footer__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__item--mobile {
+    margin-bottom: 60px;
+  }
+  .footer__desc--mobile {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .footer__networks--mobile {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__container {
@@ -722,6 +736,17 @@ body {
     margin-right: 93px;
   }
   .footer__logo {
+    margin-bottom: 20px;
+  }
+  .footer__container {
+    display: flex;
+  }
+  .footer__networks {
+    padding-top: 12px;
+    margin-left: 70px;
+    margin-right: 93px;
+  }
+  .footer--footer {
     margin-bottom: 20px;
   }
 }
@@ -763,28 +788,25 @@ body {
   color: #2196f3;
 }
 
-@media screen and (min-width: 480px) {
-  .subscription {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .subscription__form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .subscription__label--mobile {
-    text-align: center;
-  }
-  .subscription__input {
-    min-width: 450px;
-  }
-  .subscription__btn {
-    display: inline-flex;
-    min-width: 200px;
-  }
+.subscription__btn {
+  position: relative;
+  padding: 10px 62px 10px 28px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+}
+.subscription__icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  fill: #ffffff;
 }
 .subscription__label {
   font-weight: 700;
@@ -808,25 +830,85 @@ body {
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
 }
-.subscription__btn {
-  position: relative;
-  padding: 10px 62px 10px 28px;
-  height: 50px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: transparent;
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .subscription__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subscription__label--mobile {
+    text-align: center;
+  }
+  .subscription__input {
+    min-width: 450px;
+  }
+  .subscription__btn {
+    display: inline-flex;
+    min-width: 200px;
+  }
 }
-.subscription__icon {
-  position: absolute;
-  top: 13px;
-  right: 28px;
-  fill: #ffffff;
+@media screen and (min-width: 1200px) {
+  .subscription {
+    display: inline-flex;
+    gap: 12px;
+  }
+  .subscription__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .subscription__label {
+    padding-top: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .subscription__input {
+    min-width: 358px;
+    padding: 15px 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--hero-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+  }
+  .subscription__input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .subscription__btn {
+    position: relative;
+    margin-top: 48px;
+    padding: 10px 62px 10px 28px;
+    min-width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+  }
+  .subscription__icon {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    fill: #ffffff;
+  }
 }
 
 .backdrop {
