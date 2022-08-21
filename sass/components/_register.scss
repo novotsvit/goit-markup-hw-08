@@ -1,4 +1,18 @@
 .register {
+  font-size: 12px;
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    &__text-label--mobile {
+      line-height: calc(14 / 12);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & {
+      font-size: 14px;
+    }
+  }
+
   &__title {
     display: block;
     margin-bottom: 12px;
@@ -117,9 +131,8 @@
     opacity: 1;
   }
   &__text-label {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    line-height: calc(24 / 14);
+
     color: $primary-text-color;
 
     user-select: none;

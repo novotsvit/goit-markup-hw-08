@@ -941,6 +941,11 @@ body {
   transform: translate(-50%, -50%);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
+}
 .modal__btn {
   position: absolute;
   top: 8px;
@@ -955,6 +960,19 @@ body {
   fill: #2196f3;
 }
 
+.register {
+  font-size: 12px;
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .register__text-label--mobile {
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .register {
+    font-size: 14px;
+  }
+}
 .register__title {
   display: block;
   margin-bottom: 12px;
@@ -1053,9 +1071,7 @@ body {
   opacity: 1;
 }
 .register__text-label {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  line-height: 1.7142857143;
   color: #757575;
   user-select: none;
 }
