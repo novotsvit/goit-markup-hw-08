@@ -23,11 +23,77 @@
           <a href="./index.html" class="logo"
             >Web<span class="logo__secondary-part">Studio</span></a
           >
+          <button
+            type="button"
+            class="menu-button is-open"
+            aria-expanded="true"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg class="mobile-btn-icon" width="24px" height="16px">
+              <use
+                class="mobile-btn-icon__menu"
+                href="./images/symbol-defs.svg#icon-mobile-btn-icon"
+              ></use>
+              <use class="mobile-btn-icon__close" href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <div class="menu-nav">
+              <ul class="menu-nav__list item list">
+                <li class="menu-nav__item">
+                  <a class="menu-nav__link" href="./index.html">Студія</a>
+                </li>
+                <li class="menu-nav__item">
+                  <a class="menu-nav__link menu-nav__link--current" href="./portfolio.html"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="menu-nav__item">
+                  <a class="menu-nav__link" href="">Контакти</a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-contacts">
+              <ul class="menu-contacts__list list">
+                <li class="menu-contacts__item item">
+                  <a
+                    class="menu-contacts__link menu-contacts__link--mobile"
+                    href="tel:+380961111111"
+                    >+38 096 111 11 11
+                  </a>
+                </li>
+                <li class="menu-contacts__item item">
+                  <a class="menu-contacts__link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-socials">
+              <ul class="menu-socials__list list">
+                <li class="menu-socials__item item">
+                  <a class="menu-socials__link" href="">Instagram</a>
+                </li>
+                <li class="menu-socials__item item">
+                  <a class="menu-socials__link" href="">Twitter</a>
+                </li>
+                <li class="menu-socials__item item">
+                  <a class="menu-socials__link" href="">Facebook</a>
+                </li>
+                <li class="menu-socials__item item">
+                  <a class="menu-socials__link" href="">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <ul class="nav__list item list">
             <li class="nav__item">
-              <a class="nav__link " href="./index.html">Студія</a>
+              <a class="nav__link" href="./index.html">Студія</a>
             </li>
-            <li class="nav__item"><a class="nav__link   nav__link--current" href="./portfolio.html">Портфоліо</a></li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--current" href="./portfolio.html">Портфоліо</a>
+            </li>
             <li class="nav__item"><a class="nav__link" href="">Контакти</a></li>
           </ul>
         </nav>
@@ -238,9 +304,9 @@
       </section>
     </main>
     <!-- Footer -->
-  <footer class="footer">
+    <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__item  footer__item--mobile   item">
+        <div class="footer__item footer__item--mobile item">
           <a href="./index.html" class="logo logo--footer"
             >Web<span class="logo__secondary-part logo__secondary-part--light">Studio</span></a
           >
@@ -265,8 +331,8 @@
             </ul>
           </address>
         </div>
-        <div class="footer__networks footer__networks--mobile  item">
-          <p class="footer__desc  footer__desc--mobile ">приєднуйтесь</p>
+        <div class="footer__networks footer__networks--mobile item">
+          <p class="footer__desc footer__desc--mobile">приєднуйтесь</p>
           <ul class="socials list">
             <li class="socials__item item">
               <a
@@ -320,7 +386,9 @@
         </div>
         <div class="subscription item">
           <label class="subscription__form item">
-            <span class="subscription__label subscription__label--mobile  ">Підпишіться на розсилку</span>
+            <span class="subscription__label subscription__label--mobile"
+              >Підпишіться на розсилку</span
+            >
             <input
               class="subscription__input"
               type="email"
@@ -337,5 +405,13 @@
         </div>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
