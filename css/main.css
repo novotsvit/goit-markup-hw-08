@@ -677,6 +677,9 @@ body {
     display: block;
     font-size: 0;
   }
+  .clients__link {
+    width: 210px;
+  }
 }
 .clients__link {
   display: inline-block;
