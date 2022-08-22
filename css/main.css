@@ -625,13 +625,13 @@ body {
   text-align: center;
   color: #212121;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .clients {
     display: inline-block;
   }
   .clients__item {
     display: inline-block;
-    padding-top: 30px;
+    margin-top: 30px;
   }
   .clients__item:nth-child(odd) {
     margin-right: 30px;
