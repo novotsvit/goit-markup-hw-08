@@ -60,7 +60,7 @@
       font-size: 0;
     }
     
-  
+  }
   &__link {
     display: inline-block;
     padding: 16px 50px;
@@ -73,8 +73,6 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-}
-
 
   &__link:hover,
   &__link:focus {
