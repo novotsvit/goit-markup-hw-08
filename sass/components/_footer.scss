@@ -14,14 +14,12 @@
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
     &__container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      display: inline-block;
+      text-align: center;
     }
     &__item {
-      display: flex;
-      flex-direction: column;
+      display: inline-block;
+      text-align: center;
     }
 
     &__item--mobile {
