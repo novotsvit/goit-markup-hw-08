@@ -1,7 +1,15 @@
 .header {
   border-bottom: 1px solid $ph-border-color;
-  &__group {
-    display: flex;
-    align-items: center;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    &__group {
+      display:inherit;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__group {
+      display: flex;
+      align-items: center;
+    }
   }
 }
