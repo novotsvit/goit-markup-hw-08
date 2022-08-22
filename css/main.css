@@ -700,9 +700,6 @@ body {
   fill: #2196f3;
 }
 .clients__link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
