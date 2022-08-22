@@ -646,7 +646,7 @@ body {
   }
   .clients__link {
     display: inline-block;
-    padding: 16px 20px;
+    padding: 16px 50px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
