@@ -1116,10 +1116,26 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
-.portfolio__nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+@media screen and (max-width: 767px) {
+  .portfolio__nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 .portfolio__nav .item:not(:last-child) {
   margin-right: 8px;
@@ -1155,8 +1171,20 @@ body {
   gap: 30px;
   list-style: none;
 }
-.card-set .item {
-  flex-basis: calc((100% - 60px) / 3);
+@media screen and (max-width: 767px) {
+  .card-set .item {
+    flex-basis: calc((100% - 0px) / 1);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-set .item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-set .item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .product__link:hover, .product__link:focus {

@@ -4,7 +4,20 @@
   gap: 30px;
   list-style: none;
 
-& .item {
-  flex-basis: calc((100% - 60px) / 3);
-}
+  @media screen and (max-width: 767px) {
+    & .item {
+      flex-basis: calc((100% - 0px) / 1);
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    & .item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & .item {
+      flex-basis: calc((100% - 60px) / 3);
+    }
+  }
 }

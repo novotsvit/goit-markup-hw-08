@@ -11,11 +11,28 @@
     clip-path: inset(50%);
     margin: -1px;
   }
-  &__nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    &__nav {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
   }
+  @media screen and (min-width: 768px) {
+    &__nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__nav {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+
   &__nav .item:not(:last-child) {
     margin-right: 8px;
   }
