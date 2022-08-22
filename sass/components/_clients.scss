@@ -4,6 +4,8 @@
     color: $title-text-color;
   }
   @media screen and (max-width: 767px) {
+    display: inline-block;
+
     &__item {
       display: inline-block;
     }
@@ -24,7 +26,7 @@
 
     &__link {
       display: inline-block;
-      padding: 16px 50px;
+      padding: 16px 20px;
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
