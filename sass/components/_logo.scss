@@ -5,22 +5,29 @@
   text-decoration: none;
   color: $accent-color;
 
-
- @media screen and (max-width: 1199px){
-  &--footer {
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
- }
-  & {
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    &--footer {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    & {
       font-size: 24px;
       line-height: calc(28 / 24);
     }
-}
+    &__secondary-part {
+      font-size: 24px;
+      line-height: calc(28 / 24);
+    }
+  }
 
-  
   @media screen and (min-width: 1200px) {
     & {
+      font-size: 26px;
+      line-height: calc(31 / 26);
+    }
+
+    &__secondary-part {
       font-size: 26px;
       line-height: calc(31 / 26);
     }
@@ -30,19 +37,6 @@
     font-family: $secondary-font;
     text-decoration: none;
     color: $logo-first-color;
-
-    @media screen and (max-width: 1199px) {
-      &__secondary-part {
-        font-size: 24px;
-        line-height: calc(28 / 24);
-      }
-      @media screen and (min-width: 1200px) {
-        &__secondary-part {
-          font-size: 26px;
-          line-height: calc(31 / 26);
-        }
-      }
-    }
   }
   &__secondary-part--light {
     color: $hero-color;
