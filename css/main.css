@@ -737,7 +737,7 @@ body {
   }
   .footer__item--mobile {
     margin-bottom: 60px;
-    margin-right: 76px;
+    margin-right: 61px;
   }
   .footer__desc--mobile {
     display: block;
@@ -746,7 +746,7 @@ body {
   }
   .footer__networks--mobile {
     margin-left: 165px;
-    margin-right: 76px;
+    margin-right: 61px;
     margin-bottom: 60px;
   }
 }
