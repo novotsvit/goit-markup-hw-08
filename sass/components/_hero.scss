@@ -45,32 +45,61 @@
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero-bg.jpg);
+      url(../images/hero-img/her-img-480x1.jpg);
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: $overlay-bg-color;
+    @media (min-resolution: 2dppx) {
+      &--overlay {
+        background-image: url(../images/hero-img/her-img-480x2.jpg);
+      }
+    }
+
+    @media (min-width: 768px) {
+      &--overlay {
+        background-image: url(../images/hero-img/her-img-768x1.jpg);
+      }
+
+      @media (min-resolution: 2dppx) {
+        &--overlay {
+          background-image: url(../images/hero-img/her-img-768x2.jpg);
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      &--overlay {
+        background-image: url(../images/hero-img/her-img-1200x1.jpg);
+      }
+
+      @media (min-resolution: 2dppx) {
+        &--overlay {
+          background-image: url(../images/hero-img/her-img-1200x2.jpg);
+        }
+      }
+    }
   }
-  &__button {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $overlay-bg-color;
+}
 
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
+&__button {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 
-    line-height: calc(30 / 16);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    box-shadow: 0px 4px 4px $box-shadow-color;
-    border-radius: 4px;
-    border: 4px solid transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
 
-    color: $hero-color;
-    background-color: $accent-color;
-  }
+  line-height: calc(30 / 16);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px $box-shadow-color;
+  border-radius: 4px;
+  border: 4px solid transparent;
+
+  color: $hero-color;
+  background-color: $accent-color;
 }
