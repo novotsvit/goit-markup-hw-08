@@ -737,6 +737,7 @@ body {
   }
   .footer__item--mobile {
     margin-bottom: 60px;
+    margin-right: 76px;
   }
   .footer__desc--mobile {
     display: block;
@@ -744,6 +745,8 @@ body {
     margin-top: 5px;
   }
   .footer__networks--mobile {
+    margin-left: 165px;
+    margin-right: 76px;
     margin-bottom: 60px;
   }
 }
@@ -896,7 +899,6 @@ body {
     min-width: 200px;
   }
   .subscription__input {
-    align-items: center;
     width: 450px;
   }
 }
