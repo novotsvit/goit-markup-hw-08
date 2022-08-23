@@ -1,88 +1,82 @@
 .hero {
+  // Mobile styles
+  padding: 118px 0px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: $hero-bg-color;
-  @media screen and (min-width: 320px) and (max-width: 1199px) {
-    & {
-      padding: 118px 0px;
-    }
-    &__title {
-      width: 360px;
-
-      font-size: 26px;
-      line-height: calc(42 / 26);
-    }
-    &__button {
-      min-width: 200px;
-      padding: 10px 24px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    & {
-      padding: 200px 0px;
-    }
-    &__title {
-      width: 696px;
-      font-size: 44px;
-      line-height: calc(60 / 44);
-    }
-    &__button {
-      min-width: 216px;
-      padding: 10px 32px;
-    }
-  }
-
-  &__title {
-    font-weight: 900;
-    text-align: center;
-    letter-spacing: 0.06em;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 30px;
-    color: $hero-color;
-  }
-
-  &--overlay {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/hero-img/her-img-480x1.jpg);
-
-    @media (min-resolution: 2dppx) {
-      &--overlay {
-        background-image: url(../images/hero-img/her-img-480x2.jpg);
-      }
-    }
-
-    @media (min-width: 768px) {
-      &--overlay {
-        background-image: url(../images/hero-img/her-img-768x1.jpg);
-      }
-
-      @media (min-resolution: 2dppx) {
-        &--overlay {
-          background-image: url(../images/hero-img/her-img-768x2.jpg);
-        }
-      }
-    }
-    @media (min-width: 1200px) {
-      &--overlay {
-        background-image: url(../images/hero-img/her-img-1200x1.jpg);
-      }
-
-      @media (min-resolution: 2dppx) {
-        &--overlay {
-          background-image: url(../images/hero-img/her-img-1200x2.jpg);
-        }
-      }
-    }
-  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: $overlay-bg-color;
+
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0px;
+  }
+
+  &--overlay {
+    @media (min-width: 320px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/hero-img-480x1.jpg);
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(/images/hero-img-480x2.jpg);
+      }
+    }
+    @media (min-width: 480px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/hero-img-480x1.jpg);
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(/images/hero-img-480x2.jpg);
+      }
+    }
+    @media (min-width: 768px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/hero-img-768x1.jpg);
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(/images/hero-img-768x2.jpg);
+      }
+    }
+    @media (min-width: 1200px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(/images/hero-img-1200x1.jpg);
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(/images/hero-img-1200x2.jpg);
+      }
+    }
+  }
 }
 
-&__button {
+.hero__title {
+  width: 360px;
+
+  font-size: 26px;
+  line-height: calc(42 / 26);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  color: $hero-color;
+
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+    font-size: 44px;
+    line-height: calc(60 / 44);
+  }
+}
+
+.hero__button {
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
@@ -90,6 +84,9 @@
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
+
+  min-width: 200px;
+  padding: 10px 24px;
 
   line-height: calc(30 / 16);
   display: flex;
@@ -102,4 +99,10 @@
 
   color: $hero-color;
   background-color: $accent-color;
+
+  // Desktop styles
+  @media screen and (min-width: 1200px) {
+    min-width: 216px;
+    padding: 10px 32px;
+  }
 }
