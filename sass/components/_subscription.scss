@@ -62,7 +62,9 @@
       text-align: center;
     }
     &__input {
-      min-width: 450px;
+      min-width: 290px;
+
+      max-width: 450px;
     }
     &__btn {
       display: inline-flex;
