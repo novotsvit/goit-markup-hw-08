@@ -1,7 +1,7 @@
 .register {
   font-size: 12px;
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
     &__text-label--mobile {
       line-height: calc(14 / 12);
     }

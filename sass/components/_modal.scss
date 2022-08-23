@@ -2,9 +2,7 @@
   padding: 40px;
   position: absolute;
   left: 50%;
-  top: 50%;
-
-  width: 528px;
+  top: 400px;
 
   background-color: $header-bg-color;
   box-shadow: 0px 1px 3px $modal-shadow-color-12, 0px 1px 1px $modal-shadow-color-14,
@@ -13,27 +11,31 @@
   transform: translate(-50%, -50%);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
- @media screen  and (min-width: 480px) and (max-width: 1199px){
-  &{
-      width: 450px; 
+  @media screen and (max-width: 1199px) {
+    & {
+      width: 450px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    & {
+      width: 528px;
+    }
   }
 
- }
+  &__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
 
-&__btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+    width: 30px;
+    height: 30px;
 
-  width: 30px;
-  height: 30px;
-
-  border-radius: 50%;
-  border: 1px solid  $modal-btn-border-color;
-  background-color: $header-bg-color;
-}
-&__btn:hover,
-&__btn:focus {
-  fill: $accent-color;
-}
+    border-radius: 50%;
+    border: 1px solid $modal-btn-border-color;
+    background-color: $header-bg-color;
+  }
+  &__btn:hover,
+  &__btn:focus {
+    fill: $accent-color;
+  }
 }

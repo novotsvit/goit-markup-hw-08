@@ -1,19 +1,15 @@
 .nav {
   display: flex;
   align-items: center;
-  @media screen and (min-width: 480px)  and (max-width: 767px) {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     & {
       padding-top: 16px;
       padding-bottom: 15px;
       display: inherit;
     }
-    &__list {
-      display: none;
-    }
-    &__item {
-      display: none;
-    }
-    &__link {
+  }
+  @media screen and (max-width: 767px) {
+    &_ {
       display: none;
     }
   }
