@@ -1,7 +1,6 @@
 .subscription {
   &__btn {
-    position: relative;
-    padding: 10px 62px 10px 28px;
+    
     height: 50px;
 
     font-weight: 700;
@@ -64,6 +63,9 @@
 
     &__btn {
       display: inline-flex;
+      position: relative;
+      padding: 10px 62px 10px 28px;
+      height: 50px;
 
       min-width: 200px;
     }
@@ -90,6 +92,9 @@
     }
     &__btn {
       display: inline-flex;
+      position: relative;
+      padding: 10px 62px 10px 28px;
+      height: 50px;
 
       min-width: 200px;
     }
