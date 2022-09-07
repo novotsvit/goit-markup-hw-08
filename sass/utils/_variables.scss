@@ -3,36 +3,47 @@ $main-font: 'Roboto', sans-serif;
 $secondary-font: 'Raleway', sans-serif;
 
 /* Text colors */
-$primary-text-color: #757575;
-$title-text-color: #212121;
-$accent-color: #2196f3;
-$hero-color: #ffffff;
-$address-color: rgba(255, 255, 255, 0.6);
-$logo-first-color: #000000;
+$main-txt-cl: #757575;
+$accent-txt-cl: #2196f3;
+$light-txt-cl: #ffffff;
+$dark-txt-cl: #212121;
+
+$light-gray-txt-cl-60: rgba(255, 255, 255, 0.6);
+$gray-txt-cl-50:rgba(117, 117, 117, 0.5);
 
 /* Others colors */
-$input-border-color: rgba(255, 255, 255, 0.3);
-$cs-border-color: #eeeeee;
-$ph-border-color: #ececec;
-$box-shadow-color: rgba(0, 0, 0, 0.15);
-$network-icon-color: #afb1b8;
-$register-btn-color: #188ce8;
-$modal-shadow-color-12: rgba(0, 0, 0, 0.12);
-$modal-shadow-color-14: rgba(0, 0, 0, 0.14);
-$modal-btn-border-color: rgba(0, 0, 0, 0.1);
-$register-border-color: rgba(33, 33, 33, 0.2);
-$register-ph-color:rgba(117, 117, 117, 0.5);
-$portfolio-shadow-color:rgba(0, 0, 0, 0.08);
-$product-shadow-color:rgba(0, 0, 0, 0.06);
-$product-shadow-color-16:rgba(0, 0, 0, 0.16);
+$border-light-cl: #eeeeee;
+$border-light-gray-cl: #ececec;
+$border-gray-cl-30: rgba(255, 255, 255, 0.3);
+$border-dark-cl-20: rgba(33, 33, 33, 0.2);
+$border-reg-dark-cl-20: rgba(13, 2, 2, 0.2);
+
+$gray-icon-cl: #afb1b8;
+$blue-btn-cl: #188ce8;
+
+// dark-theme
+$dark-cl-00: #000000;
+$dark-cl-06:rgba(0, 0, 0, 0.06);
+$dark-cl-08:rgba(0, 0, 0, 0.08);
+$dark-cl-10: rgba(0, 0, 0, 0.1);
+$dark-cl-12: rgba(0, 0, 0, 0.12);
+$dark-cl-14: rgba(0, 0, 0, 0.14);
+$dark-cl-15: rgba(0, 0, 0, 0.15);
+$dark-cl-16:rgba(0, 0, 0, 0.16); 
 
 /* BG colors */
-$network-bg-color: rgba(255, 255, 255, 0.1);
-$thumb-overley-bg-color: rgba(33, 150, 243, 0.9);
-$team-bg-color: #f5f4fa;
-$accent-bg-color: #2196f3;
-$header-bg-color: #ffffff;
-$hero-bg-color: #2f303a;
-$overlay-bg-color: #c4c4c4;
-$adventages-bg-color: #f5f5f5;
-$backdrop-bg-color: rgba(0, 0, 0, 0.2);
+$white-bg-cl: #ffffff;
+$light-bg-cl: #f5f4fa;
+$light-gray-bg-cl: #f5f5f5;
+$accent-bg-cl: #2196f3;
+$blue-bg-cl-90: rgba(33, 150, 243, 0.9);
+$silver-bg-cl: #c4c4c4;
+$gray-bg-cl: #2f303a;
+$gray-bg-cl-10: rgba(255, 255, 255, 0.1);
+$dark-gray-cl-80: rgba(47, 48, 58, 0.8);
+$dark-gray-cl-40: rgba(47, 48, 58, 0.4);
+$dark-bg-cl-20: rgba(0, 0, 0, 0.2);
+
+// Grid
+$indent:30px;
+$items:3;

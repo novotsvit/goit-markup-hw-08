@@ -1,6 +1,6 @@
 .footer {
   padding: 60px 0px;
-  background-color: $hero-bg-color;
+  background-color: $gray-bg-cl;
 
   &__desc {
     margin-bottom: 20px;
@@ -9,7 +9,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
-    color: $hero-color;
+    color: $light-txt-cl;
   }
 
   @media screen and (min-width: 320px) and (max-width: 767px) {

@@ -1,6 +1,5 @@
 .subscription {
   &__btn {
-    
     height: 50px;
 
     font-weight: 700;
@@ -8,10 +7,10 @@
     line-height: calc(30 / 16);
     letter-spacing: 0.06em;
 
-    color: $hero-color;
+    color: $light-txt-cl;
 
-    background: $accent-bg-color;
-    box-shadow: 0px 4px 4px $box-shadow-color;
+    background: $accent-bg-cl;
+    box-shadow: 0px 4px 4px $dark-cl-15;
     border-radius: 4px;
     border: transparent;
   }
@@ -19,7 +18,7 @@
     position: absolute;
     top: 13px;
     right: 28px;
-    fill: $header-bg-color;
+    fill: $light-txt-cl;
   }
   &__label {
     font-weight: 700;
@@ -27,15 +26,15 @@
     line-height: calc(16 / 14);
     text-transform: uppercase;
 
-    color: $hero-color;
+    color: $light-txt-cl;
   }
   &__input {
     padding: 15px 16px;
     font-size: 16px;
     line-height: calc(20 / 16);
-    color: var(--hero-color);
-    border: 1px solid $input-border-color;
-    filter: drop-shadow(0px 4px 4px $box-shadow-color);
+    color: $light-txt-cl;
+    border: 1px solid $border-gray-cl-30;
+    filter: drop-shadow(0px 4px 4px $dark-cl-15);
     border-radius: 4px;
     background-color: transparent;
   }
@@ -43,7 +42,7 @@
     font-size: 16px;
     line-height: calc(20 / 16);
 
-    color: $address-color;
+    color: $light-gray-txt-cl-60;
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     & {
@@ -120,16 +119,16 @@
       line-height: calc(16 / 14);
       text-transform: uppercase;
 
-      color: $hero-color;
+      color: $light-txt-cl;
     }
     &__input {
       min-width: 358px;
       padding: 15px 16px;
       font-size: 16px;
       line-height: calc(20 / 16);
-      color: var(--hero-color);
-      border: 1px solid $input-border-color;
-      filter: drop-shadow(0px 4px 4px $box-shadow-color);
+      color: $light-txt-cl;
+      border: 1px solid $border-gray-cl-30;
+      filter: drop-shadow(0px 4px 4px $dark-cl-15);
       border-radius: 4px;
       background-color: transparent;
     }
@@ -137,7 +136,7 @@
       font-size: 16px;
       line-height: calc(20 / 16);
 
-      color: $address-color;
+      color: $light-gray-txt-cl-60;
     }
     &__btn {
       position: relative;
@@ -152,10 +151,10 @@
 
       letter-spacing: 0.06em;
 
-      color: $hero-color;
+      color: $light-txt-cl;
 
-      background: $accent-bg-color;
-      box-shadow: 0px 4px 4px $box-shadow-color;
+      background: $accent-bg-cl;
+      box-shadow: 0px 4px 4px $dark-cl-15;
       border-radius: 4px;
       border: transparent;
     }
@@ -163,7 +162,7 @@
       position: absolute;
       top: 13px;
       right: 28px;
-      fill: $header-bg-color;
+      fill: $light-txt-cl;
     }
   }
 }

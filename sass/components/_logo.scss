@@ -3,7 +3,7 @@
   font-family: $secondary-font;
   font-weight: 700;
   text-decoration: none;
-  color: $accent-color;
+  color: $accent-txt-cl;
 
   @media screen and (min-width: 320px) and (max-width: 1199px) {
     &--footer {
@@ -36,9 +36,9 @@
   &__secondary-part {
     font-family: $secondary-font;
     text-decoration: none;
-    color: $logo-first-color;
+    color: $dark-cl-00;
   }
   &__secondary-part--light {
-    color: $hero-color;
+    color: $light-txt-cl;
   }
 }

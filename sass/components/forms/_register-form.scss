@@ -21,7 +21,7 @@
     line-height: calc(23 / 20);
     text-align: center;
     letter-spacing: 0.03em;
-    color: $title-text-color;
+    color: $dark-txt-cl;
   }
 
   &__form {
@@ -44,7 +44,7 @@
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
-    color: $primary-text-color;
+    color: $main-txt-cl;
   }
 
   &__field {
@@ -53,7 +53,7 @@
     font-size: 14px;
     line-height: calc(14 / 12);
 
-    border: 1px solid $register-border-color;
+    border: 1px solid $border-reg-dark-cl-20;
     border-radius: 4px;
     outline: transparent;
 
@@ -61,7 +61,7 @@
   }
 
   &__field:focus {
-    border-color: $accent-color;
+    border-color: $accent-txt-cl;
   }
 
   &__icon {
@@ -69,12 +69,12 @@
     bottom: 14px;
     left: 12px;
 
-    fill: $title-text-color;
+    fill: $dark-txt-cl;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__field:focus + &__icon {
-    fill: $accent-color;
+    fill: $dark-txt-cl;
   }
 
   &__message {
@@ -84,9 +84,9 @@
     font-size: 12px;
     line-height: calc(14 / 12);
     letter-spacing: 0.01em;
-    color: $primary-text-color;
+    color: $main-txt-cl;
 
-    border: 1px solid $register-border-color;
+    border: 1px solid $border-reg-dark-cl-20;
     border-radius: 4px;
     outline: transparent;
     resize: none;
@@ -94,10 +94,10 @@
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   &__message:focus {
-    border-color: var(--accent-bg-color);
+    border-color: $accent-bg-cl;
   }
   &__message::placeholder {
-    color: $register-ph-color;
+    color: $gray-txt-cl-50;
   }
   &__agreement {
     display: flex;
@@ -108,7 +108,7 @@
     margin-bottom: 30px;
   }
   &__checkbox:focus + &__agreement-icon {
-    outline: 2px solid $accent-color;
+    outline: 2px solid $accent-txt-cl;
     outline-offset: 1px;
     border-radius: 2px;
   }
@@ -123,7 +123,7 @@
   }
   &__check {
     opacity: 0;
-    fill: $accent-color;
+    fill: $accent-txt-cl;
 
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -133,13 +133,13 @@
   &__text-label {
     line-height: calc(24 / 14);
 
-    color: $primary-text-color;
+    color: $main-txt-cl;
 
     user-select: none;
   }
 
   &__text-link {
-    color: $accent-color;
+    color: $accent-txt-cl;
     text-decoration: underline;
     text-underline-position: under;
   }
@@ -162,15 +162,15 @@
     text-align: center;
     letter-spacing: 0.06em;
 
-    color: $hero-color;
-    background: $accent-bg-color;
-    box-shadow: 0px 4px 4px $box-shadow-color;
+    color: $light-txt-cl;
+    background: $accent-bg-cl;
+    box-shadow: 0px 4px 4px $dark-cl-15;
     border-radius: 4px;
     border: transparent;
   }
 
   &__btn:focus,
   &__btn:hover {
-    background-color: $register-btn-color;
+    background-color: $blue-btn-cl;
   }
 }

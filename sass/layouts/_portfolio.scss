@@ -50,21 +50,21 @@
     line-height: 1.63;
     text-align: center;
 
-    color: $title-text-color;
-    background: $team-bg-color;
+    color: $dark-txt-cl;
+    background: $light-bg-cl;
     transition-property: background-color, color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   &__btn--current {
-    color: $hero-color;
-    background-color: $accent-bg-color;
+    color: $light-txt-cl;
+    background-color: $accent-bg-cl;
   }
   &__btn:hover,
   &__btn:focus {
-    box-shadow: 0px 3px 1px $modal-btn-border-color, 0px 1px 2px $portfolio-shadow-color,
-      0px 2px 2px $modal-shadow-color-12;
-    background-color: $accent-bg-color;
-    color: $hero-color;
+    box-shadow: 0px 3px 1px $dark-cl-10, 0px 1px 2px $dark-cl-08,
+      0px 2px 2px $dark-cl-12;
+    background-color: $accent-bg-cl;
+    color: $light-txt-cl;
   }
 }

@@ -1,7 +1,7 @@
 .clients {
   &__title {
     text-align: center;
-    color: $title-text-color;
+    color: $dark-txt-cl;
   }
   @media screen and (min-width: 320px) and (max-width: 767px) {
     display: inline-block;
@@ -80,14 +80,14 @@
 
   &__link:hover,
   &__link:focus {
-    border: 1px solid $accent-color;
-    fill: $accent-color;
+    border: 1px solid $accent-txt-cl;
+    fill: $accent-txt-cl;
   }
   &__link {
     height: 92px;
-    border: 1px solid $network-icon-color;
+    border: 1px solid $gray-icon-cl;
     border-radius: 4px;
-    fill: $network-icon-color;
+    fill: $gray-icon-cl;
     transition-property: fill, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

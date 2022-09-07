@@ -24,7 +24,7 @@
     line-height: calc(24 / 14);
     text-decoration: none;
 
-    color: var(--address-color);
+    color: $light-gray-txt-cl-60;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,14 +37,14 @@
     text-align: center;
     text-decoration: none;
 
-    color: $hero-color;
+    color: $light-txt-cl;
   }
   &__link--mail:hover,
   &__link--mail:focus {
-    color: $accent-color;
+    color: $accent-txt-cl;
   }
   &__link--tel:hover,
   &__link--tel:focus {
-    color: $accent-color;
+    color: $accent-txt-cl;
   }
 }

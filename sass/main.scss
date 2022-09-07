@@ -1,30 +1,12 @@
-@import './base/reset';
-@import './utils/variables';
-@import './utils/visually-hidden';
-@import './base/common';
-@import './utils/placeholders';
+// Ulils styles
+@import './utils/module';
 
-@import './components/header';
-@import './components/nav';
-@import './components/logo';
-@import './components/contacts';
-@import './components/hero';
-@import './components/advantages';
-@import './components/examples';
-@import './components/team';
-@import './components/socials';
-@import './components/clients';
-@import './components/footer';
-@import './components/address';
-@import './components/subscription';
+// Base styles
+@import './base/module';
 
-@import './components/backdrop';
-@import './components/modal';
-@import './components/register';
+// Components styles
+@import './components/module';
 
-@import './components/portfolio';
-@import './components/card-set';
-@import './components/product';
-@import './components/mobile.menu';
-
+// layouts styles
+@import './layouts/module';
 

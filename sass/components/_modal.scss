@@ -4,9 +4,9 @@
   left: 50%;
   top: 400px;
 
-  background-color: $header-bg-color;
-  box-shadow: 0px 1px 3px $modal-shadow-color-12, 0px 1px 1px $modal-shadow-color-14,
-    0px 2px 1px $backdrop-bg-color;
+  background-color: $white-bg-cl;
+  box-shadow: 0px 1px 3px $dark-cl-12, 0px 1px 1px $dark-cl-14,
+    0px 2px 1px $dark-bg-cl-20;
   border-radius: 4px;
   transform: translate(-50%, -50%);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -31,11 +31,11 @@
     height: 30px;
 
     border-radius: 50%;
-    border: 1px solid $modal-btn-border-color;
-    background-color: $header-bg-color;
+    border: 1px solid $dark-cl-10;
+    background-color: $white-bg-cl;
   }
   &__btn:hover,
   &__btn:focus {
-    fill: $accent-color;
+    fill: $accent-txt-cl;
   }
 }

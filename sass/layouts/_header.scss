@@ -1,0 +1,15 @@
+.header {
+  border-bottom: 1px solid $border-light-gray-cl;
+
+  @include mq(mob-only) {
+    
+    padding-top: 16px;
+    padding-bottom: 15px;
+  }
+}
+.header__group {
+  @include mq(tab) {
+    display: flex;
+    align-items: center;
+  }
+}
