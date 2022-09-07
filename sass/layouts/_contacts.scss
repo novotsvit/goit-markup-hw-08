@@ -1,4 +1,9 @@
 .contacts {
+  &--tablet {
+    @include mq(tab) {
+      margin-left: auto;
+    }
+  }
   @extend%list;
   @include mq(mob-only) {
     display: none;
@@ -13,11 +18,6 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-  }
-  &--tablet {
-    @include mq(tab) {
-      margin-left: auto;
-    }
   }
 }
 .contacts__item {
