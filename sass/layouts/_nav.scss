@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
   }
-}
+} 
 .nav__list {
   @extend%list;
   @include mq(mob-only) {
@@ -33,14 +33,13 @@
   @include mq(desk) {
     display: flex;
     align-items: center;
-
     &:not(:last-child) {
       margin-right: 50px;
     }
   }
 }
 .nav__link {
-  @include mq(tab) {
+  @include mq(tab) {  
     position: relative;
     display: block;
     padding-top: 32px;
