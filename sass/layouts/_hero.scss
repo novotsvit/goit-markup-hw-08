@@ -1,109 +1,90 @@
 .hero {
-  // Mobile styles
-  padding: 118px 0px;
+  // Common-styles
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
-
+  max-width: 1600px;
   background-color: $gray-bg-cl;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: $silver-bg-cl;
-
-  // Desktop styles
-  @media screen and (min-width: 1200px) {
-    padding: 200px 0px;
+  // Desktop-styles
+  @include mq(desk) {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
-
-  &--overlay {
-    max-width: 1600px;
-    @media (min-width: 320px) {
+}
+.hero--overlay {
+  // Mobile-styles
+  @include mq(mob-only) {
+    background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
+      url(../../images/hero-img/hero-bg@1x_sm.jpg);
+    @include mq(retina) {
       background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-        url(/images/hero-img-480x1.jpg);
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-          url(/images/hero-img-480x2.jpg);
-      }
+        url(../../images/hero-img/hero-bg@2x_sm.jpg);
     }
-    @media (min-width: 480px) {
+  }
+  // Tablet-styles
+  @include mq(tab) {
+    background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
+      url(../../images/hero-img/hero-bg@1x_md.jpg);
+    @include mq(retina) {
       background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-        url(/images/hero-img-480x1.jpg);
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-          url(/images/hero-img-480x2.jpg);
-      }
+        url(../../images/hero-img/hero-bg@2x_md.jpg);
     }
-    @media (min-width: 768px) {
+  }
+  // Desktop-styles
+  @include mq(desk) {
+    background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
+      url(../../images/hero-img/hero-bg@1x_lg.jpg);
+    @include mq(retina) {
       background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-        url(/images/hero-img-768x1.jpg);
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-          url(/images/hero-img-768x2.jpg);
-      }
-    }
-    @media (min-width: 1200px) {
-      background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-        url(/images/hero-img-1200x1.jpg);
-
-      @media (min-resolution: 2dppx) {
-        background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-          url(/images/hero-img-1200x2.jpg);
-      }
+        url(../../images/hero-img/hero-bg@2x_lg.jpg);
     }
   }
 }
-
 .hero__title {
-  width: 360px;
-
-  font-size: 26px;
-  line-height: calc(42 / 26);
-  font-weight: 900;
-  text-align: center;
-  letter-spacing: 0.06em;
-  margin-right: auto;
+  // Common-styles
+  display: block;
+  width: 320px;
   margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  text-align: center;
   color: $light-txt-cl;
-
-  // Desktop styles
-  @media screen and (min-width: 1200px) {
+  // Mobile-styles(320px-479px)
+  @include mq(mob-only) {
+    @include fonts(24px, 37px, 900, 0.02em);
+  }
+  // Mobile-styles(480px), Tablet-styles
+  @include mq(mob) {
+    width: 360px;
+    @include fonts(26px, 42px, 900, 0.06em);
+  }
+  // Desktop-styles
+  @include mq(desk) {
     width: 696px;
-    font-size: 44px;
-    line-height: calc(60 / 44);
+    @include fonts(44px, 60px, 900, 0.06em);
   }
 }
-
 .hero__button {
-  display: inline-block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-
+  padding: 6px 20px;
   min-width: 200px;
-  padding: 10px 24px;
 
-  line-height: calc(30 / 16);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  box-shadow: 0px 4px 4px $dark-cl-15;
-  border-radius: 4px;
-  border: 4px solid transparent;
+  @include fonts(16px, 30px, 700, 0.06em);
 
   color: $light-txt-cl;
   background-color: $accent-bg-cl;
-
-  // Desktop styles
-  @media screen and (min-width: 1200px) {
+  box-shadow: 0px 4px 4px $dark-cl-15;
+  border-radius: 4px;
+  border: 4px solid transparent;
+  @include mq(desk) {
+    padding-left: 28px;
+    padding-right: 28px;
     min-width: 216px;
-    padding: 10px 32px;
   }
 }

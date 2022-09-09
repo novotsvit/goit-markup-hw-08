@@ -1,3 +1,4 @@
+// Mobile-menu-container
 .menu-container {
   @include mq(mob-only) {
     display: none;
@@ -18,6 +19,7 @@
     display: none;
   }
 }
+// Mobile-menu-navigation
 .menu-nav__list {
   @extend%list;
   @include mq(mob-only) {
@@ -61,6 +63,7 @@
     display: none;
   }
 }
+// Mobile-menu-contacts
 .menu-contacts__list {
   @extend%list;
   @include mq(mob-only) {
@@ -94,6 +97,7 @@
     display: none;
   }
 }
+// Mobile-menu-socials
 .menu-socials__list {
   @extend%list;
   @include mq(mob-only) {
@@ -123,7 +127,7 @@
     display: none;
   }
 }
-
+// Mobile-menu-button
 .menu-button {
   @include mq(mob-only) {
     position: absolute;
@@ -138,24 +142,25 @@
     display: none;
   }
 }
-
-.menu-button .mobile-btn-icon__menu {
-  display: none;
+.mobile-btn-icon__menu {
+  @include mq(mob-only) {
+    .menu-button & {
+      display: none;
+    }
+    .menu-button.is-open & {
+      display: block;
+    }
+  }
 }
-.menu-button.is-open .mobile-btn-icon__menu {
-  display: block;
-}
-.menu-button.is-open .mobile-btn-icon__close {
-  display: none;
-}
-
 .mobile-btn-icon__close {
+  .menu-button.is-open & {
+    display: none;
+  }
   transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @extend%animation;
 
-.mobile-btn-icon__close:hover,
-.mobile-btn-icon__close:focus {
-  fill: $accent-txt-cl;
+  &:hover,
+  &:focus {
+    fill: $accent-txt-cl;
+  }
 }
