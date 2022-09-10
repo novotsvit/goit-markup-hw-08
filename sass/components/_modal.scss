@@ -1,41 +1,39 @@
 .modal {
-  padding: 40px;
+  padding: 20px;
   position: absolute;
   left: 50%;
   top: 400px;
+  z-index: 3;
+  min-width: 320px;
 
   background-color: $white-bg-cl;
-  box-shadow: 0px 1px 3px $dark-cl-12, 0px 1px 1px $dark-cl-14,
-    0px 2px 1px $dark-bg-cl-20;
+  box-shadow: 0px 1px 3px $dark-cl-12, 0px 1px 1px $dark-cl-14, 0px 2px 1px $dark-bg-cl-20;
   border-radius: 4px;
   transform: translate(-50%, -50%);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @media screen and (max-width: 1199px) {
-    & {
-      width: 450px;
-    }
+  transition-property: opacity;
+  @extend%animation;
+  @include mq(mob) {
+    width: 450px;
+    padding: 40px;
   }
-  @media screen and (min-width: 1200px) {
-    & {
-      width: 528px;
-    }
+  @include mq(desk) {
+    width: 528px;
   }
+}
+.modal__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
 
-  &__btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
+  width: 30px;
+  height: 30px;
 
-    width: 30px;
-    height: 30px;
+  border-radius: 50%;
+  border: 1px solid $dark-cl-10;
+  background-color: $white-bg-cl;
 
-    border-radius: 50%;
-    border: 1px solid $dark-cl-10;
-    background-color: $white-bg-cl;
-  }
-  &__btn:hover,
-  &__btn:focus {
+  &:hover,
+  &:focus {
     fill: $accent-txt-cl;
   }
 }
