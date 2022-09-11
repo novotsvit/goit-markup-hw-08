@@ -19,30 +19,30 @@
   // Mobile-styles
   @include mq(mob-only) {
     background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-      url(../../images/hero-img/hero-bg@1x_sm.jpg);
+      url(../images/hero-img/hero-bg@1x_sm.jpg);
     @include mq(retina) {
       background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-        url(../../images/hero-img/hero-bg@2x_sm.jpg);
+        url(../images/hero-img/hero-bg@2x_sm.jpg);
     }
     background-color: $gray-bg-cl;
   }
   // Tablet-styles
   @include mq(tab) {
     background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-      url(../../images/hero-img/hero-bg@1x_md.jpg);
+      url(../images/hero-img/hero-bg@1x_md.jpg);
     @include mq(retina) {
       background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-        url(../../images/hero-img/hero-bg@2x_md.jpg);
+        url(../images/hero-img/hero-bg@2x_md.jpg);
     }
     background-color: $gray-bg-cl;
   }
   // Desktop-styles
   @include mq(desk) {
     background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-      url(../../images/hero-img/hero-bg@1x_lg.jpg);
+      url(../images/hero-img/hero-bg@1x_lg.jpg);
     @include mq(retina) {
       background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
-        url(../../images/hero-img/hero-bg@2x_lg.jpg);
+        url(../images/hero-img/hero-bg@2x_lg.jpg);
     }
   }
 }
