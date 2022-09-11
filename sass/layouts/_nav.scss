@@ -1,12 +1,6 @@
 .nav {
-  @include mq(mob-only) {
-    position: relative;
-    display: block;
-  }
-  @include mq(tab) {
-    display: flex;
-    align-items: center;
-  }
+  display:flex;
+  align-items: center;
 }
 .nav__list {
   @extend%list;
