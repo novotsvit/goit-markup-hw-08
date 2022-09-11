@@ -1,10 +1,9 @@
 .modal {
-  padding: 20px;
-  position: absolute;
+  padding: 40px 20px;
+  position: relative;
   left: 50%;
   top: 400px;
-  z-index: 100;
-  min-width: 320px;
+  max-width: 450px;
 
   background-color: $white-bg-cl;
   box-shadow: 0px 1px 3px $dark-cl-12, 0px 1px 1px $dark-cl-14, 0px 2px 1px $dark-bg-cl-20;

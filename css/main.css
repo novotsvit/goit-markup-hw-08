@@ -396,12 +396,11 @@ a {
 }
 
 .modal {
-  padding: 20px;
-  position: absolute;
+  padding: 40px 20px;
+  position: relative;
   left: 50%;
   top: 400px;
-  z-index: 100;
-  min-width: 320px;
+  max-width: 450px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -757,10 +756,6 @@ a {
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
-  background-color: #2f303a;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -769,9 +764,15 @@ a {
   }
 }
 
+.hero--overlay {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 @media screen and (max-width: 767.98px) {
   .hero--overlay {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-img/hero-bg@1x_sm.jpg);
+    background-color: #2f303a;
   }
 }
 @media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
@@ -782,6 +783,7 @@ a {
 @media screen and (min-width: 768px) {
   .hero--overlay {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-img/hero-bg@1x_md.jpg);
+    background-color: #2f303a;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {

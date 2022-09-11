@@ -5,10 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
-  background-color: $gray-bg-cl;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+
   // Desktop-styles
   @include mq(desk) {
     padding-top: 200px;
@@ -16,6 +13,9 @@
   }
 }
 .hero--overlay {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   // Mobile-styles
   @include mq(mob-only) {
     background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
@@ -24,6 +24,7 @@
       background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
         url(../../images/hero-img/hero-bg@2x_sm.jpg);
     }
+    background-color: $gray-bg-cl;
   }
   // Tablet-styles
   @include mq(tab) {
@@ -33,6 +34,7 @@
       background-image: linear-gradient($dark-gray-cl-40, $dark-gray-cl-40),
         url(../../images/hero-img/hero-bg@2x_md.jpg);
     }
+    background-color: $gray-bg-cl;
   }
   // Desktop-styles
   @include mq(desk) {
