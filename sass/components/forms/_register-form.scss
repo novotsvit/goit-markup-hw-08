@@ -1,176 +1,167 @@
-.register {
-  font-size: 12px;
+// .REGISTER
+.register__title {
+  display: block;
+  margin-bottom: 12px;
+  @include fonts(20px, 30px, 700, 0.03em);
+  text-align: center;
 
-  @media screen and (min-width: 320px) and (max-width: 1199px) {
-    &__text-label--mobile {
-      line-height: calc(14 / 12);
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    & {
-      font-size: 14px;
-    }
-  }
-
-  &__title {
-    display: block;
-    margin-bottom: 12px;
-
-    font-size: 20px;
+  color: $dark-txt-cl;
+  @include mq(desk) {
     line-height: calc(23 / 20);
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $dark-txt-cl;
   }
+}
 
-  &__form {
-    margin-bottom: 20px;
-  }
+.register__form {
+  margin-bottom: 20px;
+}
 
-  &__wrap {
-    position: relative;
+.register__wrap {
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  &__wrap:not(:last-child) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  &:not(:last-child) {
     margin-bottom: 10px;
   }
+}
 
-  &__label {
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
-    color: $main-txt-cl;
-  }
+.register__label {
+  @include fonts(12px, 14px, 500, 0.01em);
+  color: $main-txt-cl;
+}
 
-  &__field {
-    padding: 12px 41px;
+.register__field {
+  padding: 11px 41px;
+  @include fonts(14px, 16px, 400, 0.02em);
 
-    font-size: 14px;
-    line-height: calc(14 / 12);
+  border: 1px solid $border-reg-dark-cl-20;
+  border-radius: 4px;
+  outline: transparent;
 
-    border: 1px solid $border-reg-dark-cl-20;
-    border-radius: 4px;
-    outline: transparent;
-
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  &__field:focus {
+  transition: border-color;
+  @extend%animation;
+  &:focus {
     border-color: $accent-txt-cl;
   }
+}
 
-  &__icon {
-    position: absolute;
-    bottom: 14px;
-    left: 12px;
+.register__icon {
+  position: absolute;
+  padding: 0;
+  bottom: 15px;
+  left: 12px;
 
-    fill: $dark-txt-cl;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: $dark-txt-cl;
+  transition: fill;
+  @extend%animation;
+  .register__field:focus + & {
+    fill: $accent-txt-cl;
   }
+}
+.register__message {
+  height: 120px;
+  padding: 12px 16px;
 
-  &__field:focus + &__icon {
-    fill: $dark-txt-cl;
-  }
+  @include fonts(14px, 16px, 400, 0.01em);
+  color: $main-txt-cl;
 
-  &__message {
-    height: 120px;
-    padding: 12px 16px;
+  border: 1px solid $border-reg-dark-cl-20;
+  border-radius: 4px;
+  outline: transparent;
+  resize: none;
 
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
-    color: $main-txt-cl;
-
-    border: 1px solid $border-reg-dark-cl-20;
-    border-radius: 4px;
-    outline: transparent;
-    resize: none;
-
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__message:focus {
+  transition: border-color;
+  @extend%animation;
+  &:focus {
     border-color: $accent-bg-cl;
   }
-  &__message::placeholder {
+  &::placeholder {
     color: $gray-txt-cl-50;
   }
-  &__agreement {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+}
 
-    margin-bottom: 30px;
-  }
-  &__checkbox:focus + &__agreement-icon {
+.register__agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-bottom: 30px;
+}
+.register__checkbox {
+  opacity: 0;
+  &:focus + .register__agreement-icon {
     outline: 2px solid $accent-txt-cl;
     outline-offset: 1px;
     border-radius: 2px;
   }
-  &__uncheck {
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__checkbox {
+  &:checked + .register__pic > .register__uncheck {
     opacity: 0;
   }
-  &__checkbox:checked + &__pic > &__uncheck {
-    opacity: 0;
-  }
-  &__check {
-    opacity: 0;
-    fill: $accent-txt-cl;
-
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  &__checkbox:checked + &__pic > &__check {
+  &:checked + .register__pic > .register__check {
     opacity: 1;
   }
-  &__text-label {
-    line-height: calc(24 / 14);
+}
 
-    color: $main-txt-cl;
+.register__uncheck {
+  transition: opacity;
+  @extend%animation;
+}
+.register__check {
+  opacity: 0;
+  fill: $accent-txt-cl;
 
-    user-select: none;
+  transition: opacity;
+  @extend%animation;
+}
+
+.register__text-label {
+  @include fonts(12px, 14px, 400, 0.03em);
+
+  color: $main-txt-cl;
+
+  user-select: none;
+
+  @include mq(desk) {
+    @include fonts(14px, 24px, 400, 0.03em);
   }
+}
 
-  &__text-link {
-    color: $accent-txt-cl;
-    text-decoration: underline;
-    text-underline-position: under;
+.register__text-link {
+  @include fonts(12px, 14px, 400, 0.03em);
+  text-decoration: underline;
+  text-underline-position: under;
+
+  color: $accent-txt-cl;
+  @include mq(desk) {
+    @include fonts(14px, 24px, 400, 0.03em);
   }
+}
 
-  &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.register__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 52px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 52px;
 
-    width: 200px;
-    height: 50px;
+  min-width: 200px;
+  height: 50px;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    text-align: center;
-    letter-spacing: 0.06em;
+  @include fonts(16px, 30px, 700, 0.06em);
+  text-align: center;
 
-    color: $light-txt-cl;
-    background: $accent-bg-cl;
-    box-shadow: 0px 4px 4px $dark-cl-15;
-    border-radius: 4px;
-    border: transparent;
-  }
+  color: $light-txt-cl;
+  background: $accent-bg-cl;
+  box-shadow: 0px 4px 4px $dark-cl-15;
+  border-radius: 4px;
+  border: transparent;
 
-  &__btn:focus,
-  &__btn:hover {
+  &:focus,
+  &:hover {
     background-color: $blue-btn-cl;
   }
 }
