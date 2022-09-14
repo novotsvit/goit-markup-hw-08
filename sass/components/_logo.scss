@@ -1,44 +1,37 @@
 .logo {
   display: inline-block;
+
   font-family: $secondary-font;
-  font-weight: 700;
+  @include fonts(24px, 28px, 700, 0.03em);
   text-decoration: none;
+
   color: $accent-txt-cl;
 
-  @media screen and (min-width: 320px) and (max-width: 1199px) {
-    &--footer {
-      display: block;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    & {
-      font-size: 24px;
-      line-height: calc(28 / 24);
-    }
-    &__secondary-part {
-      font-size: 24px;
-      line-height: calc(28 / 24);
-    }
+  @include mq(desk) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
   }
+}
+.logo__secondary-part {
+  font-family: $secondary-font;
+  @include fonts(24px, 28px, 700, 0.03em);
+  text-decoration: none;
 
-  @media screen and (min-width: 1200px) {
-    & {
-      font-size: 26px;
-      line-height: calc(31 / 26);
-    }
+  color: $dark-cl-00;
 
-    &__secondary-part {
-      font-size: 26px;
-      line-height: calc(31 / 26);
-    }
+  @include mq(desk) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
   }
+}
+.logo__secondary-part--light {
+  color: $light-txt-cl;
+}
 
-  &__secondary-part {
-    font-family: $secondary-font;
-    text-decoration: none;
-    color: $dark-cl-00;
-  }
-  &__secondary-part--light {
-    color: $light-txt-cl;
-  }
+.logo--footer {
+
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }

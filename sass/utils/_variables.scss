@@ -1,17 +1,17 @@
-// Fonts 
+// Fonts
 $main-font: 'Roboto', sans-serif;
 $secondary-font: 'Raleway', sans-serif;
 
-// Text colors 
+// Text colors
 $main-txt-cl: #757575;
 $accent-txt-cl: #2196f3;
 $light-txt-cl: #ffffff;
 $dark-txt-cl: #212121;
 
 $light-gray-txt-cl-60: rgba(255, 255, 255, 0.6);
-$gray-txt-cl-50:rgba(117, 117, 117, 0.5);
+$gray-txt-cl-50: rgba(117, 117, 117, 0.5);
 
-// Others colors 
+// Others colors
 $border-light-cl: #eeeeee;
 $border-light-gray-cl: #ececec;
 $border-gray-cl-30: rgba(255, 255, 255, 0.3);
@@ -23,15 +23,15 @@ $blue-btn-cl: #188ce8;
 
 // dark-theme
 $dark-cl-00: #000000;
-$dark-cl-06:rgba(0, 0, 0, 0.06);
-$dark-cl-08:rgba(0, 0, 0, 0.08);
+$dark-cl-06: rgba(0, 0, 0, 0.06);
+$dark-cl-08: rgba(0, 0, 0, 0.08);
 $dark-cl-10: rgba(0, 0, 0, 0.1);
 $dark-cl-12: rgba(0, 0, 0, 0.12);
 $dark-cl-14: rgba(0, 0, 0, 0.14);
 $dark-cl-15: rgba(0, 0, 0, 0.15);
-$dark-cl-16:rgba(0, 0, 0, 0.16); 
+$dark-cl-16: rgba(0, 0, 0, 0.16);
 
-// BG colors 
+// BG colors
 $white-bg-cl: #ffffff;
 $light-bg-cl: #f5f4fa;
 $light-gray-bg-cl: #f5f5f5;
@@ -45,5 +45,7 @@ $dark-gray-cl-40: rgba(47, 48, 58, 0.4);
 $dark-bg-cl-20: rgba(0, 0, 0, 0.2);
 
 // Grid
-$indent:30px;
-$items:3;
+:root {
+  --indent: 30px;
+  --items: 3;
+}
