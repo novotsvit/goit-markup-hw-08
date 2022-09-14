@@ -1,95 +1,50 @@
 .clients {
-  &__title {
-    text-align: center;
-    color: $dark-txt-cl;
+  @include section;
+  background-color: $white-bg-cl;
+}
+.clients__title {
+  margin-bottom: 30px;
+  @include fonts(28px, 33px, 700, 0.03em);
+  text-align: center;
+
+  color: $dark-txt-cl;
+  @include mq(desk) {
+    margin-bottom: 50px;
+    @include fonts(36px, 42px, 700, 0.03em);
   }
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    display: inline-block;
-
-    &__item {
-      display: inline-block;
-      margin-top: 30px;
-    }
-    &__item:nth-child(odd) {
-      margin-right: 30px;
-    }
-
-    &__title {
-      font-size: 30px;
-      line-height: calc(33 / 28);
-    }
-
-    &__list {
-      display: block;
-      font-size: 0;
-    }
-
-    &__link {
-      display: inline-block;
-      padding: 16px 50px;
-    }
+}
+.clients__list {
+  @extend%list;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  --items: 2;
+  @include mq(tab) {
+    --items: 3;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &__link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &__title {
-      font-size: 28px;
-      line-height: calc(33 / 28);
-      margin-bottom: 30px;
-    }
-    &__list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    &__item {
-      flex-basis: calc((100% - 60px) / 3);
-    }
-    &__link {
-      width: 226px;
-    }
+  @include mq(desk) {
+    --items: 6;
   }
-  @media screen and (min-width: 1200px) {
-    &__link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-    &__title {
-      font-size: 36px;
-      line-height: calc(42 / 36);
-      margin-bottom: 50px;
-    }
-    &__list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+}
 
-    &__link {
-      width: 170px;
-    }
-    &__list .item:not(:last-child) {
-      margin-right: 30px;
-    }
-  }
+.clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &__link:hover,
-  &__link:focus {
+  padding-top:  16px;
+  padding-bottom: 16px;
+  
+
+  border: 1px solid $gray-icon-cl;
+  border-radius: 4px;
+
+  fill: $gray-icon-cl;
+  transition-property: fill, border;
+  @extend%animation;
+  &:hover,
+  &:focus {
     border: 1px solid $accent-txt-cl;
     fill: $accent-txt-cl;
-  }
-  &__link {
-    height: 92px;
-    border: 1px solid $gray-icon-cl;
-    border-radius: 4px;
-    fill: $gray-icon-cl;
-    transition-property: fill, border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
