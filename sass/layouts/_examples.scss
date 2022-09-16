@@ -2,7 +2,7 @@
   @include mq(not-desk) {
     display: none;
   }
-  @include section;
+  padding-bottom: 94px;
 }
 
 .examples__heading {

@@ -1,90 +1,58 @@
 .footer {
-  padding: 60px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $gray-bg-cl;
-
-  &__desc {
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: calc(16 / 14);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-
-    color: $light-txt-cl;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include mq(mob-only) {
+    gap: 60px;
   }
-
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    &__container {
-      display: block;
-      text-align: center;
-    }
-    &__item {
-      display: inline-block;
-      text-align: center;
-    }
-
-    &__item--mobile {
-      margin-bottom: 60px;
-    }
-    &__desc--mobile {
-      display: block;
-      text-align: center;
-    }
-    &__networks--mobile {
-      margin-bottom: 60px;
-    }
+  @include mq(tab) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &__container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
-    &__item {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__item--mobile {
-      margin-bottom: 60px;
-      margin-right: 61px;
-    }
-    &__desc--mobile {
-      display: block;
-      text-align: center;
-      margin-top: 5px;
-    }
-    &__networks--mobile {
-      margin-left: 165px;
-      margin-right: 61px;
-      margin-bottom: 60px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    &__container {
-      display: flex;
-    }
-
-    &__networks {
-      padding-top: 12px;
-      margin-left: 70px;
-      margin-right: 93px;
-    }
-    &__logo {
-      margin-bottom: 20px;
-    }
-
-    &__container {
-      display: flex;
-    }
-
-    &__networks {
-      padding-top: 12px;
-      margin-left: 70px;
-      margin-right: 93px;
-    }
-    &--footer {
-      margin-bottom: 20px;
-    }
+  @include mq(desk) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
+.footer__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include mq(desk) {
+    align-items: flex-start;
+  }
+}
+.footer__logo {
+  @include mq(not-desk) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.footer__networks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include mq(tab) {
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: auto;
+  }
+}
+.footer__desc {
+  @include fonts(14px, 16px, 700, 0.03em);
+  text-transform: uppercase;
+
+  color: $light-txt-cl;
+  @include mq(not-desk){
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

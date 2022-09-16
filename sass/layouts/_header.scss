@@ -7,7 +7,7 @@
     padding-bottom: 15px;
   }
 }
-.header__group {
+.header__container {
   @include mq(tab) {
     display: flex;
     align-items: center;

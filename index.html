@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +18,10 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="header__group container">
+      <div class="header__container container">
         <!-- Header-navigation -->
         <nav class="nav">
-          <!-- Logo -->
+          <!-- Header-Logo -->
           <a href="./index.html" class="logo"
             >Web<span class="logo__secondary-part">Studio</span></a
           >
@@ -553,32 +553,33 @@
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__item footer__item--mobile item">
-          <a href="./index.html" class="logo logo--footer"
-            >Web<span class="logo__secondary-part logo__secondary-part--light">Studio</span></a
+        <div class="footer__wrap">
+          <a href="./index.html" class="footer__logo logo"
+             >Web<span class="logo__secondary-part logo__secondary-part--light">Studio</span></a
           >
           <!-- Adress -->
-          <address class="address item">
-            <ul class="address__list item list">
+          <address class="address">
+            <ul class="address__list ">
               <li class="address__item">
-                <a class="address__link address__link--location" href=""
+                <a class="address__link address__link--location" href="https://goo.gl/maps/eeVYJ86fgh2uSBYp6" target="_blank"
+                rel="nofollow noopener noreferrer"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li class="address__item address__item--mail">
-                <a class="address__link address__link--mail" href="mailto:info@example.com"
+              <li class="address__item">
+                <a class="address__link" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
               <li class="address__item">
-                <a class="address__link address__link--tel" href="tel:+380991111111"
+                <a class="address__link" href="tel:+380991111111"
                   >+38 099 111 11 11</a
                 >
               </li>
             </ul>
           </address>
         </div>
-        <!-- Footer-  networks -->
+        <!-- Footer-networks -->
         <div class="footer__networks footer__networks--mobile">
           <p class="footer__desc footer__desc--mobile">приєднуйтесь</p>
           <ul class="socials">
@@ -633,8 +634,8 @@
           </ul>
         </div>
         <!-- Subscription -->
-        <div class="subscription item">
-          <label class="subscription__form item">
+        <div class="subscription">
+          <label class="subscription__form">
             <span class="subscription__label subscription__label--mobile"
               >Підпишіться на розсилку</span
             >
@@ -645,7 +646,7 @@
               placeholder="E-mail"
             />
           </label>
-          <button class="subscription__btn item" type="submit">
+          <button class="subscription__btn" type="submit">
             Підписатися
             <svg class="subscription__icon" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-send"></use>
