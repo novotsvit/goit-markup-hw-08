@@ -6,11 +6,13 @@
 .footer__container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
   @include mq(mob-only) {
+    align-items: stretch;
     gap: 60px;
   }
   @include mq(tab) {
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -49,10 +51,25 @@
   text-transform: uppercase;
 
   color: $light-txt-cl;
-  @include mq(not-desk){
+  @include mq(not-desk) {
     margin-left: auto;
     margin-right: auto;
   }
 }
-
-
+.footer__subscription {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch; 
+  @include mq(tab) {
+    align-items: center; 
+    margin-top: 60px;
+  }
+  @include mq(desk) {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 12px;
+    margin-bottom: auto;
+    gap: 12px;
+  }
+}

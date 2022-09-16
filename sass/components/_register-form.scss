@@ -10,7 +10,6 @@
     line-height: calc(23 / 20);
   }
 }
-
 .register__form {
   margin-bottom: 20px;
 }
@@ -41,7 +40,8 @@
 
   transition: border-color;
   @extend%animation;
-  &:focus {
+  &:focus,
+  &:hover {
     border-color: $accent-txt-cl;
   }
 }
