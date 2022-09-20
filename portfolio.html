@@ -18,10 +18,10 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="header__group container">
+      <div class="header__container container">
         <!-- Header-navigation -->
         <nav class="nav">
-          <!-- Logo -->
+          <!-- Header-Logo -->
           <a href="./index.html" class="logo"
             >Web<span class="logo__secondary-part">Studio</span></a
           >
@@ -64,20 +64,20 @@
       <section class="portfolio section">
         <div class="container">
           <h1 class="portfolio__title">portfolio</h1>
-          <ul class="portfolio__nav list">
-            <li class="portfolio__item item">
-              <button class="portfolio__btn portfolio__btn--current" type="button">Все</button>
+          <ul class="portfolio__nav">
+            <li class="portfolio__item">
+              <button class="portfolio__btn portfolio__btn--current" type="button">Усі</button>
             </li>
-            <li class="portfolio__item item">
+            <li class="portfolio__item">
               <button class="portfolio__btn" type="button">Веб-сайти</button>
             </li>
-            <li class="portfolio__item item">
+            <li class="portfolio__item">
               <button class="portfolio__btn" type="button">Додатки</button>
             </li>
-            <li class="portfolio__item item">
+            <li class="portfolio__item">
               <button class="portfolio__btn" type="button">Дизайн</button>
             </li>
-            <li class="portfolio__item item">
+            <li class="portfolio__item ">
               <button class="portfolio__btn" type="button">Маркетинг</button>
             </li>
           </ul>
@@ -329,38 +329,40 @@
         </div>
       </section>
     </main>
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__item footer__item--mobile item">
-          <a href="./index.html" class="logo logo--footer"
-            >Web<span class="logo__secondary-part logo__secondary-part--light">Studio</span></a
+        <div class="footer__wrap">
+          <a href="./index.html" class="footer__logo logo"
+             >Web<span class="logo__secondary-part logo__secondary-part--light">Studio</span></a
           >
           <!-- Adress -->
-          <address class="address item">
-            <ul class="address__list item list">
+          <address class="address">
+            <ul class="address__list ">
               <li class="address__item">
-                <a class="address__link address__link--location" href=""
+                <a class="address__link address__link--location" href="https://goo.gl/maps/eeVYJ86fgh2uSBYp6" target="_blank"
+                rel="nofollow noopener noreferrer"
                   >м. Київ, пр-т Лесі Українки, 26</a
                 >
               </li>
-              <li class="address__item address__item--mail">
-                <a class="address__link address__link--mail" href="mailto:info@example.com"
+              <li class="address__item">
+                <a class="address__link" href="mailto:info@example.com"
                   >info@example.com</a
                 >
               </li>
               <li class="address__item">
-                <a class="address__link address__link--tel" href="tel:+380991111111"
+                <a class="address__link" href="tel:+380991111111"
                   >+38 099 111 11 11</a
                 >
               </li>
             </ul>
           </address>
         </div>
-        <div class="footer__networks footer__networks--mobile item">
+        <!-- Footer-networks -->
+        <div class="footer__networks">
           <p class="footer__desc footer__desc--mobile">приєднуйтесь</p>
-          <ul class="socials list">
-            <li class="socials__item item">
+          <ul class="socials">
+            <li class="socials__item">
               <a
                 class="socials__link socials__link--dark"
                 href="https://www.instagram.com"
@@ -372,7 +374,7 @@
                 </svg>
               </a>
             </li>
-            <li class="socials__item item">
+            <li class="socials__item ">
               <a
                 class="socials__link socials__link--dark"
                 href="https://www.twitter.com"
@@ -384,7 +386,7 @@
                 </svg>
               </a>
             </li>
-            <li class="socials__item item">
+            <li class="socials__item">
               <a
                 class="socials__link socials__link--dark"
                 href="https://www.facebook.com"
@@ -396,25 +398,25 @@
                 </svg>
               </a>
             </li>
-            <li class="socials__item item">
+            <li class="socials__item">
               <a
                 class="socials__link socials__link--dark"
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
-                <svg class="network-icons item" width="20" height="20">
+                <svg class="network-icons" width="20" height="20">
                   <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="subscription item">
-          <label class="subscription__form item">
-            <span class="subscription__label subscription__label--mobile"
-              >Підпишіться на розсилку</span
-            >
+        <!-- Subscription -->
+        <div class="footer__subscription">
+          <label class="subscription__form">
+            <span class="subscription__label"
+              >Підпишіться на розсилку</span>
             <input
               class="subscription__input"
               type="email"
@@ -422,7 +424,7 @@
               placeholder="E-mail"
             />
           </label>
-          <button class="subscription__btn item" type="submit">
+          <button class="subscription__btn" type="submit">
             Підписатися
             <svg class="subscription__icon" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-send"></use>

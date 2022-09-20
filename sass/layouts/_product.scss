@@ -1,48 +1,39 @@
-.product{
-
-&__link:hover,
-&__link:focus {
-  box-shadow: 0px 1px 1px $dark-cl-12, 0px 4px 4px $dark-cl-06,
-    1px 4px 6px $dark-cl-16;
+.product {
+  @extend%list;
+  --items: 1;
+  @include mq(tab) {
+    --items: 2;
+  }
+  @include mq(desk) {
+    --items: 3;
+  }
 }
-&__position {
-  background-color: $white-bg-cl;
-}
-&__link{
+// .product__item{
+//   display: inline-block;
+  
+// }
+.product__link {
   display: block;
+
   background-color: $white-bg-cl;
+
   transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend%animation;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px $dark-cl-12, 0px 4px 4px $dark-cl-06, 1px 4px 6px $dark-cl-16;
+  }
 }
-&__meta {
-  padding: 20px 24px;
-
-  border-right: 1px solid $border-light-cl;
-  border-bottom: 1px solid $border-light-cl;
-  border-left: 1px solid $border-light-cl;
-}
-&__heading {
-  margin-bottom: 4px;
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-
-  color: $dark-txt-cl;
-}
-&__position {
-  font-size: 16px;
-  line-height: 1.88;
-
-  color: $main-txt-cl;
-}
-&__wrap {
+.product__wrap {
   position: relative;
   overflow: hidden;
 }
-&__overlay {
+.product__desc {
+  @include fonts(18px, 28px, 400, 0.03em);
+  
+  color: $light-txt-cl;
+}
+.product__overlay {
   padding: 63px 24px;
   position: absolute;
   top: 0;
@@ -53,19 +44,32 @@
   background-color: $blue-bg-cl-90;
   transform: translateY(+100%);
   transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-&__link:hover &__overlay,
-&__link:focus &__overlay {
-  transform: translateY(0%);
-}
-&__desc {
-  font-size: 18px;
-  line-height: 1.56;
+  @extend%animation;
 
-  color: $light-txt-cl;
-}
+  .product__link:hover &,
+  .product__link:focus & {
+    transform: translateY(0%);
+  }
 }
 
+.product__meta {
+  display: block;
+  
+  padding: 20px 24px;
+  border-right: 1px solid $border-light-cl;
+  border-bottom: 1px solid $border-light-cl;
+  border-left: 1px solid $border-light-cl;
+}
+.product__heading {
+  margin-bottom: 4px;
+  @include fonts(18px, 36px, 700, 0.06em);
 
+  color: $dark-txt-cl;
+}
+.product__position {
+  
+  @include fonts(16px, 30px, 400, 0.03em);
+  color: $main-txt-cl;
+
+  background-color: $white-bg-cl;
+}
