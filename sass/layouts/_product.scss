@@ -1,45 +1,69 @@
 .product {
   @extend%list;
   --items: 1;
+
   @include mq(tab) {
     --items: 2;
   }
+
   @include mq(desk) {
     --items: 3;
   }
 }
-// .product__item{
-//   display: inline-block;
-  
-// }
+
+.product__item {
+  display: flex;
+  border: 1px solid $border-light-cl;
+}
+
 .product__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   background-color: $white-bg-cl;
 
   transition-property: box-shadow;
   @extend%animation;
+
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px $dark-cl-12, 0px 4px 4px $dark-cl-06, 1px 4px 6px $dark-cl-16;
   }
 }
+
 .product__wrap {
   position: relative;
   overflow: hidden;
+  display: flex;
 }
+
 .product__desc {
+  display: flex;
   @include fonts(18px, 28px, 400, 0.03em);
-  
+
   color: $light-txt-cl;
 }
+
 .product__overlay {
-  padding: 63px 24px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 10px 10px;
+
+  @include mq(mob) {
+    padding: 77px 24px;
+  }
+
+  @include mq(tab) {
+    padding-top: 49px;
+  }
+
+  @include mq(desk) {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
 
   background-color: $blue-bg-cl-90;
   transform: translateY(+100%);
@@ -53,23 +77,24 @@
 }
 
 .product__meta {
-  display: block;
-  
-  padding: 20px 24px;
-  border-right: 1px solid $border-light-cl;
-  border-bottom: 1px solid $border-light-cl;
-  border-left: 1px solid $border-light-cl;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+  padding-right: 24px;
 }
+
 .product__heading {
-  margin-bottom: 4px;
   @include fonts(18px, 36px, 700, 0.06em);
 
   color: $dark-txt-cl;
 }
-.product__position {
-  
-  @include fonts(16px, 30px, 400, 0.03em);
-  color: $main-txt-cl;
 
+.product__position {
+  @include fonts(16px, 30px, 400, 0.03em);
+
+  color: $main-txt-cl;
   background-color: $white-bg-cl;
 }
