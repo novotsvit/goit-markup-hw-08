@@ -29,7 +29,7 @@
   height: inherit;
   margin-left: auto;
   margin-right: auto;
-  padding: 36px 30px;
+  padding: 48px 40px;
 
   background-color: $white-bg-cl;
 
@@ -39,10 +39,6 @@
   .backdrop--is-hidden & {
     transform: translateY(-100%);
   }
-  @include mq(mob) {
-    padding: 48px 40px;
-  }
-
   @include mq(tab) {
     display: none;
   }
@@ -134,52 +130,41 @@
 .mobile-menu-contacts__link {
   display: block;
   margin-right: auto;
-  @include fonts(20px, 24px, 500, 0.02em);
+  @include fonts(24px, 28px, 500, 0.02em);
+  color: $main-txt-cl;
 
-  @include mq(mob) {
-    @include fonts(24px, 28px, 500, 0.02em);
-    color: $main-txt-cl;
-  }
   @include mq(tab) {
     display: none;
   }
   &--mobile {
-    @include fonts(28px, 34px, 500, 0.02em);
+    @include fonts(34px, 40px, 500, 0.02em);
     color: $accent-txt-cl;
-    @include mq(mob) {
-      @include fonts(34px, 40px, 500, 0.02em);
-    }
   }
 }
 // Mobile-menu-socials
 .mobile-menu-socials__list {
   margin-top: auto;
   @extend%list;
-  @include mq(mob-only) {
-    display: flex;
-    align-items: center;
-  }
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
   @include mq(tab) {
     display: none;
   }
 }
 .mobile-menu-socials__item {
-  margin-right: 10px;
-  @include mq(mob) {
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
+  &:not(:last-child) {
+    margin-right: 20px;
   }
   @include mq(tab) {
     display: none;
   }
 }
 .mobile-menu-socials__link {
-  @include fonts(14px, 18px, 500, 0.02em);
+  @include fonts(18px, 22px, 500, 0.02em);
   color: $accent-txt-cl;
-  @include mq(mob) {
-    @include fonts(18px, 22px, 500, 0.02em);
-  }
   @include mq(tab) {
     display: none;
   }

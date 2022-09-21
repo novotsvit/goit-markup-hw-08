@@ -90,17 +90,14 @@
   margin-bottom: 30px;
 }
 .register__checkbox {
-  opacity: 0;
-  &:focus + .register__agreement-icon {
-    outline: 2px solid $accent-txt-cl;
-    outline-offset: 1px;
-    border-radius: 2px;
-  }
   &:checked + .register__pic > .register__uncheck {
     opacity: 0;
   }
   &:checked + .register__pic > .register__check {
     opacity: 1;
+  }
+  &:focus + .register__pic > .register__uncheck {
+    fill: #2196f3;
   }
 }
 
