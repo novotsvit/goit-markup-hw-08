@@ -156,12 +156,16 @@
 }
 .mobile-menu-socials__item {
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 9px;
+    padding-right: 10px;
+    border-right: 1px solid $border-dark-cl-20;
   }
+
   @include mq(tab) {
     display: none;
   }
 }
+
 .mobile-menu-socials__link {
   @include fonts(18px, 22px, 500, 0.02em);
   color: $accent-txt-cl;
